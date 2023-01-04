@@ -5,7 +5,7 @@ savedModel = tf.keras.models.load_model("OOP_model.h5") #load saved model
 # Load and preprocess the image
 #"car.jpg" is name of my random testing image from internet, you can import your own image to same folder as python file and try it 
 
-def prediction(image_name):
+def prediction(image_name):   #function for image recognition
     image = tf.keras.preprocessing.image.load_img(image_name, target_size=(32, 32))
     image = tf.keras.preprocessing.image.img_to_array(image) / 255.0
     image = image[tf.newaxis, ...]  # Add an extra dimension for the batch size
@@ -22,5 +22,5 @@ def prediction(image_name):
     print(f"Class index is {class_idx} and the class name is {classes[class_idx]}!")
 
 
-prediction("car.jpg")
+prediction("car.jpg")  #call the function and recognize given image
 
