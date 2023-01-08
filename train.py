@@ -55,7 +55,7 @@ class Neural_network:
 
 network = Neural_network(1)  #create new instance of class Neural_network with specific count of traing epochs
 network.training_model()    #train the model
-savedModel = tf.keras.models.load_model("OOP_model.h5")  #save model to file
+
 
 
 
