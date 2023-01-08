@@ -1,5 +1,12 @@
+import click
 from picture import Picture
 
-picture = Picture("car.jpg")
-picture.recognition()  #call the function and recognize given image
+@click.command()
+@click.option("--name", prompt = "Enter the name of picture you want to recognize")
+def myfunc(name):
+    picture = Picture(name)
+    picture.recognition()
+
+if __name__ == "__main__":
+    myfunc()
 
